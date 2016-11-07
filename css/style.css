@@ -1,0 +1,120 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+header {
+	border-bottom: 5px solid #002e44;
+	padding: 1em;
+}
+h1, h3, h4 {
+	font-family: 'Roboto', sans-serif;
+	color: #B41300;
+	text-transform: uppercase;
+	margin: 0 0 0.5em 0;
+}
+h2 {
+	font-family: 'Robot', sans-serif;
+	color: #DC4626;
+	text-transform: uppercase;
+	margin: 1em 0 1em 0;
+}
+.nav-wrap {
+	height: 50px;
+}
+nav {
+	background-color: #0096bb;
+	padding: 1em;
+}
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+nav li {
+	float:  none;
+	display: inline-block;
+	margin-right: 1em;
+}
+nav a {
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 0.5em 0.75em;
+}
+nav a:focus {
+	outline-color: #E6DFB5;
+}
+nav a:hover {
+	color: #002e44;
+}
+.wrapper {
+	margin: 0 auto;
+	padding: 1em;
+	width: 50rem;
+}
+fieldset {
+	margin-bottom: 2em;
+	margin-right: 1em;
+	border: none;
+	background-color: #ffc;
+} 
+legend {
+	font-weight: bold;
+}
+label {
+	display: block;
+}
+input:not([type="radio"]):not([type="checkbox"]) {
+	display: block;
+	margin-bottom: 2em;
+	width: 20em;
+}
+.error {
+	color: red;
+}
+
+.msg {
+	color: purple;
+	font-weight: bold;
+	padding-bottom: 1em;
+}
+footer {
+	position:fixed;
+	bottom:0;
+	right:0;
+	width: 100%;
+	color: #37241A;
+	padding: 1em;
+	margin-top: 1em;
+	text-align: center;
+	background-color: #0096bb;
+	color: #fff;
+}
+footer a {
+	color: #fff;
+	text-decoration: underline;
+}
+footer a:hover {
+	color: #002e44
+}
+footer p {
+	font-size: 0.8em;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+
+
+
+
+
+
