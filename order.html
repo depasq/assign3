@@ -21,75 +21,67 @@
 	  </nav>
 	</div>
 
-	<div class="wrapper">
-		<h1>Pie Order Form</h1>
-		<p>Fill out the form below to place an order for a wonderful pie.</p>
+	<main id="maincontent">
+		<h1>3D Print Order Form</h1>
+		<div id="examples">
+		<figure>
+			<img id='img0' src="img/blackhole.jpg" alt="blackhole">
+			<img id='img1' src="img/pillars2.jpg" alt="Eagle Nebula">
+			<img id='img2' src="img/eros.jpg" alt="Asteroid Eros">
+			<img id='img3' src="img/homunculus.jpg" alt="Carina Nebula">
+			<img id='img4' src="img/mars.jpg" alt="Mars">
+			<figcaption>Some example prints of astronomical objects including the Pillars of Creation, Mars and the Asteroid Eros (hover to enlarge).</figcaption><br>
+			<button id="color">Toggle Color</button>
+			<button id="border">Click Me!</button>
+		</figure>
+		</div>
+		<p>Use the form below to enter a print request. Using our state-of-the-art Ultimaker 2+ Extended 3D printer, we can have a print ready in no time using a variety of filaments including PLA, ABS, Nylon and even wood-infused plastics.</p><br>
 		<form action="" method="">
 			<fieldset>
-				<legend>Your contact information</legend>
-				<label for="name">Your name (required)</label>
+				<legend>Your contact information (* required)</legend>
+				<label for="name">*Your name</label>
 					<input type="text" id="name" aria-required="true" autofocus>
 
 				<label for="phone">Phone number</label>
-					<input type="tel" id="phone" aria-required="false" placeholder="Don't forget the area code!">
+					<input type="tel" id="phone" aria-required="false">
 
-				<label for="email">Email</label>
-					<input type="email" id="email" aria-required="false">
-
-				<label for="date">Requested pickup date</label>
-					<input type="date" id="date" aria-required="false">
+				<label for="email">*Email</label>
+					<input type="email" id="email" aria-required="true">
 
 			</fieldset>
 			<fieldset>
-				<legend>About your pie</legend>
-				<label>How many pies would you like?
-					<input type="number" id="qty" min="1" max="10">
-				</label>
-				<p id="bottomcrust">What type of bottom crust?</p>
-					<label>
-						<input type="radio" name="bottom" value="classic" checked aria-checked="true" aria-labelledby="bottomcrust" role="radiogroup"> Classic <br>
-					</label>
-
-					<label>
-						<input type="radio" name="bottom" value="gfclassic" aria-labelledby="bottomcrust" role="radiogroup"  aria-checked="false"> Gluten-Free Classic 
-					</label>
-				
-				<p id="topcrust">What type of top crust?</p>
-					<label>
-						<input type="radio" name="top" value="full" checked role="radiogroup" aria-labelledby="topcrust" aria-checked="true"> Classic Full Crust 
-					</label>
-					<label>
-						<input type="radio" name="top" value="lattice" role="radiogroup" aria-labelledby="topcrust" aria-checked="false"> Lattice Crust
-					</label>
-					<label>
-						<input type="radio" name="top" value="gffull" role="radiogroup" aria-labelledby="topcrust" aria-checked="false"> Gluten-Free Full Crust 
-					</label>
-					<label>
-						<input type="radio" name="top" value="none" role="radiogroup" aria-labelledby="topcrust" aria-checked="false"> No top crust
-					</label>
-
-				<p>What type of pie filling?</p>
-					<select id="filling">
+				<legend>Choose your print</legend>
+				<p>Available Models</p>
+					<select id="models">
 						<option selected>Select one...</option>
-						<option value="apple">Apple</option>
-						<option value="blueberry">Blueberry</option>
-						<option value="cherry">Cherry</option>
-						<option value="pumpkin">Pumpkin</option>
+						<option value="casa">Cassiopeia A</option>
+						<option value="eros">Asteroid Eros</option>
+						<option value="mars">Mars</option>
+						<option value="pillars">Pillars of Creation</option>
 					</select>
-					<div class="msg"></div>
-					<label>
-						<input id="sugarfree" type="checkbox" value="sugarfree">Make the filling sugar-free
-					</label>
-				
-				<label>Special requests:<br>
-					<textarea id="comments" placeholder="Any additional instructions for us?"></textarea>
+				<br>
+				<p>Available Colors</p>
+					<select id="colors">
+						<option selected>Select one...</option>
+						<option value="blue">Blue</option>
+						<option value="silver">Silver</option>
+					</select>
+				<br><br>
+				<label>How many copies would you like? (Max 3)
+					<input type="number" id="qty" min="1" max="3">
 				</label>
+				<div id="msgs"></div>
+
 				<button type="submit">Submit</button>
 			</fieldset>
 		</form>
-	</div>
+	</main>
+   <footer>
+       	<p>&copy; 2016 All Rights Reserved | Site Design By: <a href="http://jdepasquale.com" target="_blank">JDP Design</a></p>
+    </footer>
+
 	<script   src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
-	<script src="js/form-end.js"></script>
+	<script src="js/a3d.js"></script>
 </body>
 </html>
 
