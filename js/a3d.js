@@ -84,12 +84,128 @@ $(document).ready(function(){
 		}
 	}
 
-	// add filtered border to images
+	// add borders to even images (filtering)
 	$('#border').click(function(){
 		$('figure img:even').css({'border-color': 'black', 
 								  'border-width': '1px',
 								  'border-style': 'solid'});
 	});
+
+	// make site monochrome
+	$('#mono').click(function(){
+		var imgs2 = [
+			'img/blackhole_g.jpg',
+			'img/pillars2_g.jpg',
+			'img/eros_g.jpg',
+			'img/homunculus_g.jpg',
+			'img/mars_g.jpg'];
+		$('header img').attr('src', 'img/logo_BW.png');
+		$('body').css({'background-color': 'black'});
+		$('nav').css({'background-color': 'gray'});
+		$('footer').css({'background-color': 'gray'});
+		$('fieldset').css({'background-color': 'lightgray'});
+		$('h1, h2, legend').css({'color': 'black'});
+		$('fieldset p').css({'color': 'black'});
+		for (i=0; i<= imgs2.length; i++){
+			var id = '#img'+i;
+			$(id).attr('src', imgs2[i]);
+		}
+	});
+
+	// show experimental canvas
+	$('#experiment').click(function(){
+		$('#draw').slideDown('slow');
+	});
+
+// canvas interaction
+	//basic shapes
+	$('#circle').click(function(){
+		$('#canvas').drawArc({
+			fillStyle: 'steelblue',
+			x: 200,
+			y: 150,
+			radius: 100,
+			layer: true,
+			draggable: true
+		}) 		
+	});
+	$('#square').click(function(){
+		$('#canvas').drawRect({
+			fillStyle: '#3e2e',
+			x: 400,
+			y: 250,
+			width: 100,
+			height: 100,
+			layer: true,
+			draggable: true
+		}) 
+	});
+	$('#triangle').click(function(){
+		$('#canvas').drawPolygon({
+			fillStyle: 'brown',
+			strokeStyle: 'black',
+			strokeWidth: 4,
+			x: 200, y: 100,
+			radius: 50,
+			sides: 3,
+			layer: true,
+			draggable: true
+		}) 
+	});
+
+	//random shapes chained together
+	$('#shapes').click(function(){
+		$('#canvas').drawEllipse({
+			fillStyle: '#c33',
+			x: 200,
+			y: 150,
+			width: 200,
+			height: 100,
+			layer: true,
+			draggable: true
+		}) 
+		.drawRect({
+			fillStyle: '#3e2e',
+			x: 400,
+			y: 250,
+			width: 200,
+			height: 100,
+			layer: true,
+			draggable: true
+		}) 
+		.drawPolygon({
+			strokeStyle: 'black',
+			strokeWidth: 3,
+			x: 200,
+			y: 200,
+			radius: 50,
+			sides: 5,
+			rotate: 25, 
+			fillStyle: '#ccef32',
+			layer: true,
+			draggable: true
+		}); 
+	}); 
+
+	$('#final').click(function(){
+		var userText = $('#addText').val();
+
+		$('#canvas').drawText({
+			fillStyle: '#2ec3',
+			strokeStyle: '#000',
+			strokeWidth: 3,
+			x: 300,
+			y: 320,
+			fontSize: '2.5em',
+			fontFamily: 'Monospace, sans-serif',
+			text: userText
+		}) 
+	}); 
+
+	$('#clear').click(function(){
+		$('#canvas').clearCanvas();
+	});
+
 });
 
 

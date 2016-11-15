@@ -18,7 +18,6 @@ header {
 h1, h2, h3, h4 {
 	font-family: 'Roboto', sans-serif;
 	color: brown;
-	/*color: #002e44;*/
 	text-transform: uppercase;
 	margin: 0 0 0.5em 0;
 }
@@ -52,7 +51,6 @@ nav a:hover {
 	color: #002e44;
 }
 main {
-	float: left;
 	background-color:  #fff;
 	color: #222;
 	border-radius: 5px;
@@ -60,11 +58,6 @@ main {
 	margin: 2% 0 5% 2%;
 	padding: 1em;
 }
-article {
-	display: block;
-	clear: both;
-}
-
 figure { 
     display: block;
     margin-top: 1em;
@@ -81,6 +74,10 @@ main img {
 #examples img{
 	width: 150px;
 }
+form {
+	float: left;
+	max-width: 30%;
+}
 fieldset {
 	margin-top: -1.2em;
 	margin-bottom: 1em;
@@ -88,7 +85,6 @@ fieldset {
 	border: none;
 	border-radius: 5px;
 	background-color: #d2f6ff;
-	max-width: 35%;
 } 
 legend {
 	font-weight: bold;
@@ -112,6 +108,33 @@ input:not([type="radio"]):not([type="checkbox"]) {
 	color: brown;
 	padding-bottom: 1em;
 }
+#draw {
+	float: right;
+	width: 65%;
+	margin-left: 1em;
+	display: none;
+}
+#controls {
+	float: left;
+	width: 15%;
+}
+#controls p {
+	margin-top: 0;
+	text-decoration: underline;
+}
+#controls button {
+	margin-bottom: 0.5em;
+}
+#addText {
+	width: 90px;
+}
+#clear {
+	clear: both;
+}
+canvas {
+	border: 1px dotted black;
+}
+
 footer {
 	position:fixed;
 	bottom:0;

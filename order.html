@@ -32,7 +32,10 @@
 			<img id='img4' src="img/mars.jpg" alt="Mars">
 			<figcaption>Some example prints of astronomical objects including the Pillars of Creation, Mars and the Asteroid Eros (hover to enlarge).</figcaption><br>
 			<button id="color">Toggle Color</button>
-			<button id="border">Click Me!</button>
+			<button id="border">Even Borders</button>
+			<button id="mono">Monochrome</button>
+			<button id="experiment">Experimental</button>
+
 		</figure>
 		</div>
 		<p>Use the form below to enter a print request. Using our state-of-the-art Ultimaker 2+ Extended 3D printer, we can have a print ready in no time using a variety of filaments including PLA, ABS, Nylon and even wood-infused plastics.</p><br>
@@ -71,16 +74,36 @@
 					<input type="number" id="qty" min="1" max="3">
 				</label>
 				<div id="msgs"></div>
-
 				<button type="submit">Submit</button>
 			</fieldset>
 		</form>
+		<div id="draw">
+			<h2>Experimental: Create your own Model</h2>
+			<p>This tool will (eventually) allow you to create a 3D model right in the browser and send it to us for printing. Start with some basic shapes and position them however you wish. Add some text to digitally "sign" your creation. [Note: support for full 3D shapes still under development.]</p>
+			<div id="controls">
+				<p>Controls:</p>
+				<input id="circle" type="checkbox" value="circle">Circle<br>
+				<input id="square" type="checkbox" value="square">Square<br>
+				<input id="triangle" type="checkbox" value="triangle">Triangle<br><br>
+				<button id="shapes">Random Shapes</button><br><br>
+
+		        <label for="addText">Signature:</label>
+        		<input type="text" id="addText">
+				<button id="final">Finalize</button>
+
+				<button id="clear">Clear Canvas</button>
+			</div>
+			<canvas width="530" height="350" id="canvas">
+		</div>
+		<div id="clear"></div>
+
 	</main>
    <footer>
        	<p>&copy; 2016 All Rights Reserved | Site Design By: <a href="http://jdepasquale.com" target="_blank">JDP Design</a></p>
     </footer>
 
 	<script   src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+	<script src="js/jcanvas.min.js"></script>
 	<script src="js/a3d.js"></script>
 </body>
 </html>
