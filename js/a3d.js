@@ -187,6 +187,7 @@ $(document).ready(function(){
 		}); 
 	}); 
 
+	// add text to canvas
 	$('#final').click(function(){
 		var userText = $('#addText').val();
 
@@ -202,8 +203,12 @@ $(document).ready(function(){
 		}) 
 	}); 
 
+	// clear canvas
 	$('#clear').click(function(){
 		$('#canvas').clearCanvas();
+		$('#circle').prop('checked',false);
+		$('#square').prop('checked',false);
+		$('#triangle').prop('checked',false);
 	});
 
 });
