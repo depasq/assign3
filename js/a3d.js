@@ -10,7 +10,7 @@ $(document).ready(function(){
 			$('label[for="email"]').html('Please enter your email.').addClass('error');
 			submit.preventDefault();
 		}
-	}); 
+	});
 	$('#name').focusout(function(){
 		if ($('#name').val().length == 0) {
 			$('label[for="name"]').html('Please enter your name.').addClass('error');
@@ -86,7 +86,7 @@ $(document).ready(function(){
 
 	// add borders to even images (filtering)
 	$('#border').click(function(){
-		$('figure img:even').css({'border-color': 'black', 
+		$('figure img:even').css({'border-color': 'black',
 								  'border-width': '1px',
 								  'border-style': 'solid'});
 	});
@@ -127,7 +127,7 @@ $(document).ready(function(){
 			radius: 100,
 			layer: true,
 			draggable: true
-		}) 		
+		})
 	});
 	$('#square').click(function(){
 		$('#canvas').drawRect({
@@ -138,7 +138,7 @@ $(document).ready(function(){
 			height: 100,
 			layer: true,
 			draggable: true
-		}) 
+		})
 	});
 	$('#triangle').click(function(){
 		$('#canvas').drawPolygon({
@@ -150,7 +150,7 @@ $(document).ready(function(){
 			sides: 3,
 			layer: true,
 			draggable: true
-		}) 
+		})
 	});
 
 	//random shapes chained together
@@ -163,7 +163,7 @@ $(document).ready(function(){
 			height: 100,
 			layer: true,
 			draggable: true
-		}) 
+		})
 		.drawRect({
 			fillStyle: '#3e2e',
 			x: 400,
@@ -172,7 +172,7 @@ $(document).ready(function(){
 			height: 100,
 			layer: true,
 			draggable: true
-		}) 
+		})
 		.drawPolygon({
 			strokeStyle: 'black',
 			strokeWidth: 3,
@@ -180,12 +180,12 @@ $(document).ready(function(){
 			y: 200,
 			radius: 50,
 			sides: 5,
-			rotate: 25, 
+			rotate: 25,
 			fillStyle: '#ccef32',
 			layer: true,
 			draggable: true
-		}); 
-	}); 
+		});
+	});
 
 	// add text to canvas
 	$('#final').click(function(){
@@ -200,8 +200,8 @@ $(document).ready(function(){
 			fontSize: '2.5em',
 			fontFamily: 'Monospace, sans-serif',
 			text: userText
-		}) 
-	}); 
+		})
+	});
 
 	// clear canvas
 	$('#clear').click(function(){
@@ -209,19 +209,7 @@ $(document).ready(function(){
 		$('#circle').prop('checked',false);
 		$('#square').prop('checked',false);
 		$('#triangle').prop('checked',false);
+		$('#addText').val('');
 	});
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
