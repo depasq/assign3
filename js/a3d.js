@@ -204,7 +204,7 @@ $(document).ready(function(){
 	});
 
 	// clear canvas
-	$('#clear').click(function(){
+	$('#clean').click(function(){
 		$('#canvas').clearCanvas();
 		$('#circle').prop('checked',false);
 		$('#square').prop('checked',false);
