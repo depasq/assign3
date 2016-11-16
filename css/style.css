@@ -128,7 +128,7 @@ input:not([type="radio"]):not([type="checkbox"]) {
 #addText {
 	width: 90px;
 }
-#clear {
+.clear {
 	clear: both;
 }
 canvas {
